@@ -1,0 +1,101 @@
+name: Bug Report
+description: Report a bug or error that needs to be fixed
+title: "[BUG] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please provide as much detail as possible to help us understand and fix the issue.
+
+  - type: input
+    id: system
+    attributes:
+      label: Affected System/Project
+      description: Which Solar Networks system or project is affected?
+      placeholder: e.g., Solar Panel Management System, Customer Portal, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: How severe is this bug?
+      options:
+        - Critical (System down/broken)
+        - High (Major functionality affected)
+        - Medium (Some functionality affected)
+        - Low (Minor issue/cosmetic)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: Describe the bug...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the bug
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: Describe what you expected to happen...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Describe what actually happened...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Details
+      description: Information about the environment where the bug occurred
+      placeholder: |
+        - OS: [e.g., Windows 10, macOS 12, Ubuntu 20.04]
+        - Browser: [e.g., Chrome 95, Firefox 94]
+        - Version: [e.g., v1.2.3]
+        - Device: [e.g., Desktop, Mobile]
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Logs/Screenshots
+      description: If applicable, add error logs, screenshots, or other relevant files
+      placeholder: Paste error logs or drag and drop screenshots here...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context about the problem
+      placeholder: Add any other context about the problem here...
+    validations:
+      required: false

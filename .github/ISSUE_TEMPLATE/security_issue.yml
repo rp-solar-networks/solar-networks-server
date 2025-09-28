@@ -1,0 +1,95 @@
+name: Security Issue
+description: Report a security vulnerability or concern
+title: "[SECURITY] "
+labels: ["security", "critical", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **IMPORTANT**: If this is a critical security vulnerability, please do not report it publicly. 
+        Contact the security team directly at security@solar-networks.com
+
+  - type: input
+    id: system
+    attributes:
+      label: Affected System/Project
+      description: Which Solar Networks system or project is affected?
+      placeholder: e.g., Solar Panel Management System, Customer Portal, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Security Severity
+      description: How severe is this security issue?
+      options:
+        - Critical (Immediate risk to data/systems)
+        - High (Significant security risk)
+        - Medium (Moderate security concern)
+        - Low (Minor security improvement)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Security Issue Type
+      description: What type of security issue is this?
+      options:
+        - Authentication/Authorization
+        - Data exposure/leakage
+        - Input validation
+        - Cross-site scripting (XSS)
+        - SQL injection
+        - CSRF
+        - Insecure configuration
+        - Cryptographic issue
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Security Issue Description
+      description: A clear description of the security issue (avoid sensitive details)
+      placeholder: Describe the security concern...
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential Impact
+      description: What could happen if this security issue is exploited?
+      placeholder: Describe the potential impact...
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected_data
+    attributes:
+      label: Affected Data/Systems
+      description: What data or systems could be affected?
+      placeholder: e.g., User personal data, payment information, internal systems...
+    validations:
+      required: false
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Temporary Mitigation
+      description: Any temporary workarounds or mitigation steps
+      placeholder: Describe any temporary fixes or workarounds...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other relevant security information
+      placeholder: Add any other context about the security issue here...
+    validations:
+      required: false
