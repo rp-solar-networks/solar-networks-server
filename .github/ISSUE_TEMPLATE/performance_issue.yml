@@ -1,0 +1,99 @@
+name: Performance Issue
+description: Report a performance-related problem
+title: "[PERFORMANCE] "
+labels: ["performance", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a performance issue! Please provide detailed information to help us identify and resolve the problem.
+
+  - type: input
+    id: system
+    attributes:
+      label: Affected System/Project
+      description: Which Solar Networks system or project is affected?
+      placeholder: e.g., Solar Panel Management System, Customer Portal, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Performance Issue Type
+      description: What type of performance issue is this?
+      options:
+        - Slow loading/response times
+        - High resource usage (CPU/Memory)
+        - Timeout errors
+        - Database performance
+        - Network latency
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: A clear description of the performance problem
+      placeholder: Describe the performance issue...
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Performance Metrics
+      description: Specific performance metrics or measurements
+      placeholder: |
+        - Load time: [e.g., 15 seconds]
+        - Response time: [e.g., 5 seconds]
+        - CPU usage: [e.g., 90%]
+        - Memory usage: [e.g., 8GB]
+        - Error rate: [e.g., 5%]
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected_performance
+    attributes:
+      label: Expected Performance
+      description: What performance level do you expect?
+      placeholder: e.g., Page should load within 3 seconds...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: How to reproduce this performance issue
+      placeholder: |
+        1. Navigate to...
+        2. Perform action...
+        3. Observe slow performance...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Details
+      description: Information about the environment where the issue occurs
+      placeholder: |
+        - Server specs: [e.g., 4 CPU cores, 16GB RAM]
+        - Database: [e.g., PostgreSQL 13]
+        - Load: [e.g., 100 concurrent users]
+        - Network: [e.g., 100Mbps connection]
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: Add any other context about the performance issue here...
+    validations:
+      required: false
